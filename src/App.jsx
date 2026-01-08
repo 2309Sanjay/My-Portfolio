@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import './App.css'
 import Nav from './nav.jsx'
@@ -23,7 +23,7 @@ function App() {
   }, [theme])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -31,9 +31,10 @@ function App() {
         <Route path='/skills' element={<Skills />} />
         <Route path='/project' element={<Project />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

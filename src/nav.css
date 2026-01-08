@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arya:wght@400;700&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Risque&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px;
+    position: absolute;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.theme>button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* .user {
+    font-size: 1rem;
+    color: ghostwhite;
+} */
+
+nav>div>h1 {
+    font-size: 1rem;
+    color: ghostwhite;
+}
+
+.nav-bar {
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-bar h3 {
+    font-size: 0.8rem;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.nav-bar h3:active {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    transform: scale(0.95);
+}
+
+.nav-bar>a:last-child h3 {
+    border-radius: 15px;
+    background-color: ghostwhite;
+    color: black;
+}
+
+
+
+.hamburger {
+    display: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* Theme */
+
+[data-theme="dark"] {
+    --theme: ghostwhite;
+    --nav-c: black;
+    --hover: black;
+}
+
+[data-theme="light"] {
+    --theme: black;
+    --nav-c: ghostwhite;
+    --hover: ghostwhite;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.theme-light {
+    color: ghostwhite;
+}
+
+.theme-dark {
+    color: yellow;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+
+    nav {
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        color: ghostwhite;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--theme);
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+        display: none;
+        z-index: 999;
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-bar h3 {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        padding: unset;
+        color: var(--nav-c);
+    }
+
+    .nav-bar h3:active {
+        background-color: var(--hover);
+    }
+
+    .nav-bar>a:last-child h3 {
+        padding: unset;
+        background-color: unset;
+        color: var(--nav-c);
+    }
+
+}

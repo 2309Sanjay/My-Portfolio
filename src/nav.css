@@ -159,5 +159,8 @@ nav>div>h1 {
         background-color: unset;
         color: var(--nav-c);
     }
+    .theme-btn{
+        font-size: 12px;
+    }
 
 }

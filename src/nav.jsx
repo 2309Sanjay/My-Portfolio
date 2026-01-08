@@ -20,7 +20,7 @@ export default function Nav({ theme, setTheme }) {
         <nav>
             <div className='theme'>
                 <button onClick={toggleTheme} className="theme-btn">
-                    {theme === "dark" ? <FaSun className={`theme-${theme}`} /> : <FaMoon className={`theme-${theme}`} />}
+                    {theme === "dark" ? <FaMoon className={`theme-${theme}`} /> : <FaSun className={`theme-${theme}`} />}
                 </button>
                 <h1>My Portfolio</h1>
             </div>

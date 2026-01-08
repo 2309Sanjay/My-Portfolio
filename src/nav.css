@@ -31,11 +31,6 @@ nav {
     cursor: pointer;
 }
 
-/* .user {
-    font-size: 1rem;
-    color: ghostwhite;
-} */
-
 nav>div>h1 {
     font-size: 1rem;
     color: ghostwhite;
@@ -55,19 +50,18 @@ nav>div>h1 {
     cursor: pointer;
 }
 
-.nav-bar h3:active {
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    transform: scale(0.95);
-}
-
 .nav-bar>a:last-child h3 {
     border-radius: 15px;
     background-color: ghostwhite;
     color: black;
 }
 
+.nav-bar h3:active {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    transform: scale(0.95);
+}
 
 
 .hamburger {
@@ -80,15 +74,15 @@ nav>div>h1 {
 /* Theme */
 
 [data-theme="dark"] {
-    --theme: ghostwhite;
-    --nav-c: black;
-    --hover: black;
+    --theme: rgb(19, 19, 22);
+    --nav-c: ghostwhite;
+    --hover: ghostwhite;
 }
 
 [data-theme="light"] {
-    --theme: black;
-    --nav-c: ghostwhite;
-    --hover: ghostwhite;
+    --theme: ghostwhite;
+    --nav-c: black;
+    --hover: black;
 }
 
 .theme-btn {
@@ -99,11 +93,12 @@ nav>div>h1 {
 }
 
 .theme-light {
-    color: ghostwhite;
+    color: yellow;
 }
 
 .theme-dark {
-    color: yellow;
+
+    color: ghostwhite;
 }
 
 
@@ -127,14 +122,15 @@ nav>div>h1 {
         width: 100%;
         background-color: var(--theme);
         flex-direction: column;
-        gap: 10px;
-        padding: 15px 0;
+        /* padding: 15px 0px; */
         display: none;
         z-index: 999;
+        transition: all 1s ease;
     }
 
     .nav-bar.active {
         display: flex;
+        transition: all 1s ease;
     }
 
     .nav-bar a {
@@ -146,20 +142,32 @@ nav>div>h1 {
         font-size: 1rem;
         width: 100%;
         text-align: center;
-        padding: unset;
+        padding: 5px 0;
         color: var(--nav-c);
-    }
-
-    .nav-bar h3:active {
-        background-color: var(--hover);
     }
 
     .nav-bar>a:last-child h3 {
-        padding: unset;
-        background-color: unset;
+        border-radius: unset;
+        border-bottom: none;
+        background-color: var(--theme);
         color: var(--nav-c);
     }
-    .theme-btn{
+
+    .nav-bar h3:active,
+    .nav-bar>a:last-child h3:active {
+        background-color: var(--hover);
+        color: var(--theme);
+        transform: unset;
+        border-radius: unset;
+    }
+
+    .nav-bar h3:hover,
+    .nav-bar>a:last-child h3:hover {
+        background-color: var(--hover);
+        color: var(--theme);
+    }
+
+    .theme-btn {
         font-size: 12px;
     }
 

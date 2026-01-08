@@ -72,11 +72,11 @@ strong {
     }
 
     .box {
-        width: 50px;
+        width: 45px;
         height: 60px;
     }
 
     strong {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }

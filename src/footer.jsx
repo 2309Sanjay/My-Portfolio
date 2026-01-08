@@ -19,9 +19,9 @@ export default function Footer() {
 
                     {/* WhatsApp */}
                     <a
-                        href="https://web.whatsapp.com/918939419545"
+                        href="https://wa.me/918939419545"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="contact-btn whatsapp"
                     >
                         <img src={whatsapp} alt="" /> <p> Whatsapp </p>

@@ -8,7 +8,7 @@ import call from './assets/images/phone call.png'
 import linkedin from './assets/images/linkedin.png'
 import github from './assets/images/github.png'
 
-import { FaGithub, FaDownload } from "react-icons/fa";
+import { FaGithub, FaDownload, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
     return (
@@ -18,7 +18,7 @@ export default function Contact() {
                 <input type="text" placeholder="Your Name" required />
                 <input type="email" placeholder="Your Email" required />
                 <textarea placeholder="Your Message" rows="5"></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">Send Message <FaPaperPlane /></button>
             </form>
         </section>
     );

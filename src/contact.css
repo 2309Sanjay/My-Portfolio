@@ -55,7 +55,6 @@ form button:active {
 @media screen and (max-width: 650px) {
     .contact {
         padding: 15px 5% 50px;
-        min-height: 72vh;
     }
 
     form {

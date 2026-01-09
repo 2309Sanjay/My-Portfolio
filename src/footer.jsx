@@ -53,27 +53,29 @@ export default function Footer() {
                         rel="noreferrer"
                         className="contact-btn">
                         <img src={gmail} alt="" /> <p> Email </p>
-                </a>
+                    </a>
 
-                {/* Phone */}
-                <a href="tel:+918939419545" className="contact-btn">
-                    <img src={call} alt="" /> <p> Call </p>
-                </a>
-            </div>
+                    {/* Phone */}
+                    <a href="tel:+918939419545" className="contact-btn">
+                        <img src={call} alt="" /> <p> Call </p>
+                    </a>
+                </div>
 
-            <div>
-                {/* CV Download */}
-                <a
-                    href="/Sanjay_resume.pdf"
-                    download
-                    className="cv-btn"
-                >
-                    <FaDownload /> Download CV
-                </a>
-            </div>
+                <div>
+                    {/* CV Download */}
+                    <a
+                        href="/Sanjay_resume.pdf"
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cv-btn"
+                    >
+                        <FaDownload /> Download CV
+                    </a>
+                </div>
 
-            <strong> &copy; 2024 Sanjay AD. All rights reserved. </strong>
-        </footer >
+                <strong> &copy; 2024 Sanjay AD. All rights reserved. </strong>
+            </footer >
         </>
     )
 }

@@ -12,14 +12,14 @@
 [data-theme="dark"] {
     --box: rgb(65, 63, 63);
     --content: white;
-    --h3: rgb(4, 212, 212);
-    --box-shadow: transparent;
+    --h3: #00e5c3;
+    --box-shadow: rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="light"] {
     --box: ghostwhite;
     --content: black;
-    --h3: rgb(2, 145, 145);
+    --h3: #00bfa6;
     --box-shadow: darkgrey;
 }
 
@@ -39,6 +39,18 @@
     gap: 50px;
 }
 
+@keyframes revealCard {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .project-card {
     background-color: var(--box);
     width: 300px;
@@ -49,6 +61,10 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px var(--box-shadow);
+    opacity: 0;
+    animation: revealCard 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     *{
         margin: 0;
@@ -56,8 +72,25 @@
     }
 }
 
+.project-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
 .project-card:hover {
-    transform: scale(1.1);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .project h3 {
@@ -82,26 +115,38 @@
     font-size: 0.9rem;
     font-weight: bold;
     padding: 4px 10px;
-    background-color: var(--content);
-    color: var(--box);
+    background-color: var(--h3);
+    color: var(--content);
     margin: 0 auto;
     border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-btn:active {
     transform: scale(0.95);
 }
 
+.project-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 @media screen and (max-width: 650px) {
-    .project{
+    .project {
         padding: 15px 8% 50px;
         border-radius: 6px;
     }
-    .project-card{
+
+    .project h1{
+        font-size: 1.2rem;
+    }
+
+    .project-card {
         gap: 10px;
     }
-    .project-btn{
+
+    .project-btn {
         font-size: 12px;
         border-radius: 5px;
     }

@@ -64,7 +64,7 @@ export default function Footer() {
                 <div>
                     {/* CV Download */}
                     <a
-                        href="/Sanjay_resume.pdf"
+                        href={`${import.meta.env.BASE_URL}Sanjay_resume.pdf`}
                         download
                         target="_blank"
                         rel="noopener noreferrer"

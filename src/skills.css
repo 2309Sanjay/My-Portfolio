@@ -99,6 +99,7 @@ strong {
 
 @media screen and (max-width: 650px) {
     .skills {
+        min-height: 100vh;
         padding: 15px 5% 50px;
     }
 

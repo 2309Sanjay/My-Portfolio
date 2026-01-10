@@ -5,6 +5,7 @@
 }
 
 .contact {
+    min-height: 100vh;
     padding: 50px 10%;
     display: flex;
     flex-direction: column;
@@ -55,6 +56,7 @@ form button:active {
 @media screen and (max-width: 650px) {
     .contact {
         padding: 15px 5% 50px;
+        min-height: 100vh;
     }
 
     form {

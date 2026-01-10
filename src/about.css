@@ -67,6 +67,7 @@
 @media screen and (max-width: 650px) {
     .about {
         padding: 15px 8% 50px;
+        min-height: 100vh;
     }
 
     .about h1 {

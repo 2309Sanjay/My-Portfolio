@@ -22,13 +22,13 @@ body {
 
 
 section {
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
     background-image: url("./assets/images/portfolio home.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 50px;
+    padding: 100px 10%;
 }
 
 footer {
@@ -114,6 +114,10 @@ footer strong {
 
 @media screen and (max-width: 650px) {
 
+    section {
+        min-height: 78vh;
+    }
+
     h1 {
         font-size: 1.2rem;
     }
@@ -136,7 +140,8 @@ footer strong {
         font-size: 10px;
         gap: 5px;
     }
-    .cv-btn svg{
+
+    .cv-btn svg {
         font-size: 12px;
     }
 

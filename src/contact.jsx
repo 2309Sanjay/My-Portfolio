@@ -1,5 +1,6 @@
 import React from "react";
 
+import './App.css'
 import './contact.css'
 
 import gmail from './assets/images/gmail.png'

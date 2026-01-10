@@ -5,7 +5,6 @@
 }
 
 .project {
-    padding: 50px 10%;
     background-image: unset;
 }
 
@@ -53,8 +52,8 @@
 
 .project-card {
     background-color: var(--box);
-    width: 300px;
-    min-height: 150px;
+    width: 320px;
+    min-height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,7 +93,7 @@
 }
 
 .project h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     color: var(--h3);
     font-weight: 600;
@@ -143,7 +142,12 @@
     }
 
     .project-card {
+        min-height: 150px;
         gap: 10px;
+    }
+
+    .project h3 {
+        font-size: 1rem;
     }
 
     .project-btn {
